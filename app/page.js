@@ -1,20 +1,31 @@
-// Home.jsx
 "use client"
 import React, { useState } from 'react';
 
-
+// import React from 'react';
 import Gandhi from '@/Components/Gandhi';
 const Home = () => {
 
-  const [isClicked, setIsClicked] = useState(false);
+  const ToggleButton = () => {
+    const [isVisible, setIsVisible] = useState(false);
   
-  const handleClick = () => {
-    setIsClicked(!isClicked); // Toggle the state on button click
-  };
-  function GG() {
-    return <Gandhi/>
-  }
+    const toggleVisibility = () => {
+      setIsVisible(!isVisible);
 
+    };
+    return (
+      <div className="mt-4">
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={toggleVisibility}
+      >
+        Toggle Gandhi
+      </button>
+
+      {isVisible && <Gandhi />}
+    </div>
+    )
+  
+  }
   return (
 
     <>
@@ -38,14 +49,10 @@ const Home = () => {
       </div>
     </div>
 
-    <div>
-      <button className="bg-green-500 text-black p-4" onClick={GG}>
-        Click This
-      </button>
-      {isClicked}
-    </div>
+    
     
     </>
   );
 };
+
 export default Home;

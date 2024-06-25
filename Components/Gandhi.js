@@ -1,4 +1,3 @@
-// Gandhi.jsx
 
 import React from 'react';
 

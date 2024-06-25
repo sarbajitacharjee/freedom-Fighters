@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Gandhi from './Gandhi'; // Adjust the path based on your project structure
+import Gandhi from '@/Components/Gandhi';// Adjust the path based on your project structure
 
 const ToggleButton = () => {
   const [isVisible, setIsVisible] = useState(false);
